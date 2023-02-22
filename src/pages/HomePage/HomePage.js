@@ -2,6 +2,8 @@ import React from 'react'
 import "./HomePage.css"
 import { useState } from 'react'
 
+
+
 export default function HomePage() {
   // const [formData, setFormData] = useState(
   //   {userName: "", email: "", password: ""}
@@ -40,114 +42,128 @@ console.log(formData.employment)
     console.log(formData);
   }
   return (
-    <div>
-      <h2>Survey Form</h2>
-        <form onSubmit={handleSubmit}>
-          <input 
-            onChange={handleFormData} 
-            type="text" 
-            className='fname' 
-            placeholder='FirstName'
-            name= 'firstName'
-            value={formData.firstName}
-            />
+    <div className='main-container'>
+    <img 
+      className='bg-img'
+        width={900}
+        height={1000}
+        src={require("./pexels-photo-15049185.jpeg")}
+        alt={"the background "}
+      />
+      <div className='sub-container'>
+        <h2 className='heading'>Tourism Form</h2>
+        <em className='emphasis'>Thank you for taking time to help us improve the platform</em>
+          <form onSubmit={handleSubmit} className="page-form">
+            <input 
+              onChange={handleFormData} 
+              type="text" 
+              className='fname' 
+              placeholder='FirstName'
+              name= 'firstName'
+              value={formData.firstName}
+              />
 
-          <input 
-            onChange={handleFormData} 
-            type="text" 
-            className='lname' 
-            placeholder='LastName'
-            name= 'lastName'
-            value={formData.lastName}
-            />
-          
-          <input 
-            onChange={handleFormData} 
-            type="text" 
-            className='email' 
-            placeholder='Email'
-            name= 'email'
-            value={formData.email}
-            />
+            <input 
+              onChange={handleFormData} 
+              type="text" 
+              className='lname' 
+              placeholder='LastName'
+              name= 'lastName'
+              value={formData.lastName}
+              />
             
-          
-          <input 
-            onChange={handleFormData}
-            type="password" 
-            className='pass-word' 
-            placeholder='Password'
-            name= 'password'
-            value={formData.password}
+            <input 
+              onChange={handleFormData} 
+              type="text" 
+              className='email' 
+              placeholder='Email'
+              name= 'email'
+              value={formData.email}
+              />
+              
+            
+            <input 
+              onChange={handleFormData}
+              type="password" 
+              className='pass-word' 
+              placeholder='Password'
+              name= 'password'
+              value={formData.password}
+              />
+            <textarea 
+              onChange={handleFormData}  
+              className='text-area'
+              placeholder='Put your text here'
+              name='comments'
+              value={formData.comments}
             />
-          <textarea 
-            onChange={handleFormData}  
-            className='text-area'
-            placeholder='Put your text here'
-            name='comments'
-            value={formData.comments}
-          />
 
-        <input 
-          type="checkbox"
-          id="isFriendly"
-          checked={formData.isFirendly}  //instead of the value attribute use checked 4 checked box
-          onChange={handleFormData}
-          name="isFriendly"
-        />
-        <label htmlFor="isFriendly"> Are you friendly?</label>
+            <br></br>
+          <label htmlFor="isFriendly" className='is-friendly'> What's most fascinating about tourism here?</label>
+            
+          <input 
+            type="checkbox"
+            id="isFriendly"
+            checked={formData.isFirendly}  //instead of the value attribute use checked 4 checked box
+            onChange={handleFormData}
+            name="isFriendly"
+            className='questn-check'
+          />
           
-        <fieldset className='fieldset'>
-          <legend>Current employment status</legend>
+          <fieldset className='fieldset'>
+            <legend>Employment Status </legend>
 
-          <input 
-            type="radio"
-            id="unemployed"
-            name="employment"
-            value="unemployed"
-            onChange={handleFormData}
-          />
-          <label htmlFor="unemployed">Unemployed</label>
+            <input 
+              type="radio"
+              id="unemployed"
+              name="employment"
+              value="unemployed"
+              onChange={handleFormData}
+            />
+            <label htmlFor="unemployed" className='employ-label'>Unemployed</label>
 
-          <input 
-            type="radio"
-            id="part-time"
-            name="employment"
-            value="part-time"
-            onChange={handleFormData}
-          />
-          <label htmlFor="part-time">Part-time</label>
+            <input 
+              type="radio"
+              id="part-time"
+              name="employment"
+              value="part-time"
+              onChange={handleFormData}
+            />
+            <label htmlFor="part-time" className='employ-label'>Part-time</label>
 
-          <input 
-            type="radio"
-            id="full-time"
-            name="employment"
-            value="full-time"
-            onChange={handleFormData}
-          />
-          <label htmlFor="full-time">Full-Time</label>
-        </fieldset>
+            <input 
+              type="radio"
+              id="full-time"
+              name="employment"
+              value="full-time"
+              onChange={handleFormData}
+            />
+            <label htmlFor="full-time" className='employ-label'>Full-Time</label>
+          </fieldset>
 
-        <label htmlFor="full-time">What's your favourite color?</label>
-        <select
-            id='favColor'
-            value={formData.favColor}
-            onChange={handleFormData}
-            name="favColor"
-        >
-          <option value="" >-- Choose --</option>
-          <option value="red" >Red</option>
-          <option value="orange" >Orange</option>
-          <option value="yellow" >Yellow</option>
-          <option value="green" >Green</option>
-          <option value="blue" >Blue</option>
-          <option value="indigo" >Indigo</option>
-          <option value="violet" >Violet</option>
-        </select>
+          <label htmlFor="full-time" className='last-label'>What's your favourite color?</label> <br></br>
+          <select
+              id='favColor'
+              value={formData.favColor}
+              onChange={handleFormData}
+              name="favColor"
+              className='select'
+          >
+            <option value="" >Travel Packages</option>
+            <option value="red" >Vacations</option>
+            <option value="orange" >Tour</option>
+            <option value="yellow" >Events</option>
+            <option value="green" >Hotels</option>
+            <option value="blue" >Cars</option>
+            <option value="indigo" >Groups</option>
+            <option value="violet" >Blog</option>
+          </select>
 
 
-          <button>Submit</button>
+            <button>Submit</button>
 
-        </form>
+          </form>
+      </div>
     </div>
   )
 }

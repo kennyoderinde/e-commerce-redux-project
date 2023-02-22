@@ -1,15 +1,25 @@
-.container{
-   
+.big-container{
+    height: 100vh;
+    min-height: fit-content;
+    position: relative;
 }
-.head-label{
-    width: 220px;
+h1{
+    /* text-align: center; */
+    margin-left: 10%;
+    margin-top: 10px;
+    padding-bottom: 100px;
+    color: goldenrod;
+    /* position: fixed; */
+}
+.num-input-container{
+    min-width: 20px;
     height: 20%;
     font-size: 20px;
     color: white;
     background-color: #009570;
     position: absolute;
-    left: 40%;
-    top: 35%;
+    left: 30%;
+    top: 17%;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
@@ -18,25 +28,19 @@
 
 .input-box{
     width: 150px;
-    position: absolute;
-    left: -60px;
-    top: 50px;
+    margin-left: 25px;
+    margin-top: 20px;
 }
-h1{
-    /* text-align: center; */
-    margin-left: 5%;
-    margin-bottom: 20px;
-    padding-bottom: 100px;
-    color: rgb(91, 91, 91);
-}
+
 .table{
     position: absolute;
-    top: 57%;
-    left: 10%;
+    top: 75%;
+    left: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     text-align: center;
     font-weight: 500;
+    bottom: 20px;
 
 }
 
@@ -51,9 +55,26 @@ h1{
 }
 
 .table tbody tr:nth-of-type(even) {
-    background: #eeeeee;
+    background: #f2eedb80;
 }
 
 .table tbody tr:last-of-type {
     border-bottom: 2px solid #009578;
+}
+
+@media screen and (max-width: 1382px) {
+    
+    h1{
+        margin-left: -10px;
+        margin-top: 20px;
+    }
+    .num-input-container{
+        margin-left: -100px;
+        margin-top: -20px;
+    }
+    .table{
+        position: absolute;
+        top: 250px;
+    }
+
 }

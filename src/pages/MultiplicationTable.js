@@ -34,9 +34,9 @@ function MultiplicationTable() {
   }
 
   return (
-    <div className='container'>
+    <div className='big-container'>
       <h1>Prime Numbers Multiplication Table</h1> 
-      <label className='head-label'>
+      <label className='num-input-container'>
         Number of Primes:
         <input className='input-box' type="number" value={numPrimes} onChange={handleNumPrimesChange} />
       </label> <br></br>
