@@ -1,6 +1,6 @@
 import React from 'react'
 import "./HomePage.css"
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 
 
@@ -16,7 +16,7 @@ export default function HomePage() {
       password: "", 
       comments: "",
       isFriendly: true,
-      employment: ""
+      tourism: ""
     }
   )
 
@@ -41,13 +41,15 @@ console.log(formData.employment)
     e.preventDefault()
     console.log(formData);
   }
+
+
   return (
     <div className='main-container'>
     <img 
       className='bg-img'
         width={900}
         height={1000}
-        src={require("./pexels-photo-15049185.jpeg")}
+        src={require("./pexels-photo-1005417.jpeg")}
         alt={"the background "}
       />
       <div className='sub-container'>
@@ -99,8 +101,8 @@ console.log(formData.employment)
             />
 
             <br></br>
-          <label htmlFor="isFriendly" className='is-friendly'> What's most fascinating about tourism here?</label>
-            
+          <label htmlFor="isFriendly" className='is-friendly'> What's most fascinating about your holiday here?</label>
+            {/*This is a checkbox  */}
           <input 
             type="checkbox"
             id="isFriendly"
@@ -110,43 +112,53 @@ console.log(formData.employment)
             className='questn-check'
           />
           
+          {/*  */}
           <fieldset className='fieldset'>
-            <legend>Employment Status </legend>
+            <legend>More like this ... </legend>
 
             <input 
               type="radio"
-              id="unemployed"
-              name="employment"
-              value="unemployed"
+              id="palmtree"
+              name="tourism"
+              value="palmtree"
               onChange={handleFormData}
             />
-            <label htmlFor="unemployed" className='employ-label'>Unemployed</label>
+            <label htmlFor="palmtree" className='employ-label'>Palm Trees</label>
 
             <input 
               type="radio"
-              id="part-time"
-              name="employment"
-              value="part-time"
+              id="ocean"
+              name="tourism"
+              value="ocean"
               onChange={handleFormData}
             />
-            <label htmlFor="part-time" className='employ-label'>Part-time</label>
+            <label htmlFor="ocean" className='employ-label'>Ocean</label>
 
             <input 
               type="radio"
-              id="full-time"
-              name="employment"
-              value="full-time"
+              id="adventure"
+              name="tourism"
+              value="adventure"
               onChange={handleFormData}
             />
-            <label htmlFor="full-time" className='employ-label'>Full-Time</label>
+            <label htmlFor="adventure" className='employ-label'>Adventure</label>
+
+            <input 
+              type="radio"
+              id="lifestyle"
+              name="tourism"
+              value="lifestyle"
+              onChange={handleFormData}
+            />
+            <label htmlFor="lifestyle" className='employ-label'>Lifestyle</label>
           </fieldset>
 
-          <label htmlFor="full-time" className='last-label'>What's your favourite color?</label> <br></br>
+          <label htmlFor="favPackages" className='last-label'>What's your favourite vacation package?</label> <br></br>
           <select
-              id='favColor'
+              id='favPackages'
               value={formData.favColor}
               onChange={handleFormData}
-              name="favColor"
+              name="favPackages"
               className='select'
           >
             <option value="" >Travel Packages</option>
@@ -158,7 +170,6 @@ console.log(formData.employment)
             <option value="indigo" >Groups</option>
             <option value="violet" >Blog</option>
           </select>
-
 
             <button>Submit</button>
 

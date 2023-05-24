@@ -6,9 +6,8 @@ export default function Header() {
   return (
     <div className="heading-section">
         <ul className="heading-ul">
-            <Link to="/" className="link"><li>HomePage</li></Link>
-            <Link to="/multiplication-table"><li>PrimeMultiplication</li></Link>
-            <Link to="/survey"><li>Survey</li></Link>
+          <Link to="/multiplication-table" className="link"><li>PrimeMultiplication</li></Link>
+          <Link to="/" className="link"><li>Tourism Form</li></Link>
         </ul>
     </div>
   )

@@ -11,7 +11,7 @@
 .main-container{
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(49, 61, 74, 0.575);
+    background-color: rgba(255, 255, 255, 0.134);
     background-size: cover;
     background-repeat: no-repeat ;
     position: relative;
@@ -25,24 +25,31 @@
 }
 
 .bg-img{
-    opacity: 0.2;
+    opacity: 1;
 }
 .sub-container{
     margin-left: 0%;
-    margin-top: -75%;
+    margin-top: -70%;
     position: absolute;
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
     
 }
 .heading{
-    margin-top: 1rem;
+    margin-top: -10px;
     font-size: 42px;
     text-align: center;
+    font-family: 'Pacifico', cursive;
     margin-bottom: 5px;
     text-align: center !important;
     text-shadow: 1px 1px #333;
 }
 .emphasis{
-    margin: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 5px;
     font-size: 22px;
     text-align: center !important;
     text-shadow: 1px 1px #333;
@@ -63,6 +70,7 @@ input{
     width: 60%;
     margin: 15px 15px 15px 85px;
     border-style: none;
+    border-radius: 5px;
 }
 .text-area{
      width: 60%;
@@ -81,6 +89,7 @@ textarea {
     border-style: none;
     align-items: center;
     padding: 1.175rem 0.75rem;
+    border-radius: 5px;
 
 }
 
@@ -97,12 +106,14 @@ textarea {
 fieldset{
     width: 40%;
     display: grid;
-    border: 5px solid lightgoldenrodyellow;
+    border: 5px solid rgb(122, 234, 229);
     margin: 10px 0 15px 30%;
+    border-radius: 10px;
     
-   
 }
 legend{
+    font-family: 'Pacifico', cursive;
+
     font-weight: 600;
     
 }
@@ -130,19 +141,22 @@ input[type="checkbox"] {
     
 }
 .select{
-    width: 30%;
+    width: 34%;
+    height: 35px;
     padding: 5px 15px 5px 0;
-    color: #333;
+    color: darkslategrey;
     font-size: 18px;
     font-weight: 600;
     border-style: none;
     margin-left:10px;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(122, 234, 229);
     box-shadow: 5px 10px #3131313d;
+    border-radius: 10px;
+
 }
 button{
      border: none;
-     background-color: lightgoldenrodyellow;
+     background-color: rgb(122, 234, 229);
      cursor: pointer;
      color: #333;
      padding: 0.3rem;
@@ -151,6 +165,7 @@ button{
      width: 30%;
      margin: 20px 0 15px 4%;
      box-shadow: 5px 10px #3131313d;
+    border-radius: 10px;
 
 }
 
